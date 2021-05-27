@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <title>Workout calculator</title>
+</head>
+<body>
+    <header>
+        <nav class="navigator">
+            <img src="{{ url_for('static', filename='img/imagotype.png') }}" alt="">
+        </nav>
+    </header>
+    <main> 
+        <form class="main-form" action="">
+            {{ form.csrf_token}}   
+            
+            <section class="title">
+                Workout calculator
+            </section>
+
+            <div class="form">
+                <div class="gender">
+                    {{ form.gender }}                
+                </div>
+
+                <div class="input_field">
+                    <label for="height">Height</label>
+                    {{ form.height }}
+                    <select id="height">
+                        <option value="cm">cm</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+            
+                <div class="input_field">
+                    <label for="weight">Weight</label>
+                    {{ form.weight }}
+                    <select id="weight">
+                        <option value="kg">kg</option>
+                        <option value="lbs">lbs</option>
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <label for="age">Age</label>
+                    {{ form.age }}
+                </div>
+
+                <div class="input_field">
+                    <label for="waist">Waist</label>
+                    <input type="number" name="waist" />
+                    <select id="waist">
+                        <option value="cm">cm</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_field">
+                <input type="submit" class="calculate" id="calculate" />
+            </div>
+        </form>
+    </main>
+    <div class="results">
+        <div class="BMI">
+            <p>BMI (Body Mass Index): {{ BMI }} %</p>
+        </div>
+        <div class="Body fat">
+            <p>BFP (Body Fat Percentage): {{ BFP }} %</p>
+        </div>
+        <div class="Lean body mass">
+            <p>LBM (Lean body mass): {{ LBM }} %</p>
+        </div>
+        <div class="Waist / height ratio">
+            <p>BMR (Basal Metabolic Rate): {{ BMR }} %</p>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #202020;
+}
+
+.navigator img{
+    margin: 5px 0 0 10px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form {
+    width: 370px;
+    padding: 20px;
+    margin: 35px 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.main-form .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 45px;
+    color: #202020;
+}
+
+.main-form .form {
+    width: 80%;
+}
+
+.main-form .form .input_field {
+    margin-bottom: 12px;
+}
+.main-form .form .input_field label {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-form .form .input_field input {
+    width: 100%;
+    outline: none;
+    border: 2px solid #E5E5E5;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+.main-form .form .input_field select {
+    outline: none;
+    border: 2px solid #E5E5E5;
+    padding: 8px 10px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.main-form .form .input_field :focus {
+    border: 2px solid #A8A8A8;
+}
+
+.main-form .form .gender {
+    margin-bottom: 30px;
+}
+
+.main-form .form .gender li{
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.main-form .form .gender ul{
+    margin-bottom: 40px;
+}
+
+.main-form .form .gender input{
+    cursor: pointer;
+}
+
+.main-form .form .gender label{
+    align-items: center;
+}
+
+.main-form .form .gender input[type="checkbox"]{
+    margin-left: 5px;
+    margin-right: 15px;
+    top: 0;
+    left: 0;
+}
+
+.main-form .input_field .calculate {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 0px solid #ffffff;
+    background: #202020;
+    color: #ffffff;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.results {
+    max-width: 470px;
+    width: 100%;
+    background: #ffffff;
+    margin: 60px auto 120px;
+    padding: 60px;
+    border-radius: 10px;
+    /* box-shadow: 0px 3px 10px #EDEDED; */
+    cursor: pointer;
+}
